@@ -11,7 +11,6 @@
   </template>
   
   <script setup lang="ts">
-  import { PropType } from 'vue';
   
   interface ProjectCardProps {
     title: string;
@@ -21,6 +20,6 @@
     private?: boolean;
   }
   
-  const props = defineProps<ProjectCardProps>();
+  defineProps<ProjectCardProps>();
   </script>
   
