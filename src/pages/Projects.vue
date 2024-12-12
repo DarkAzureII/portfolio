@@ -7,9 +7,8 @@
         <!-- Example for the completed hours-tracking project -->
         <ProjectCard
           title="Employee Hours Tracker"
-          :technologies="['Vue.js', 'TypeScript', 'Node.js', 'PostgreSQL']"
+          :technologies="['React', 'TailwindCSS', 'JavaScript', 'Node.js', 'Express.js', 'MySQL', 'Nginx', 'Pm2']"
           description="A web platform for tracking and summarizing employee working hours. Improved reporting speed and accuracy."
-          :image="hoursTrackerImage"
           :private="true"
         />
   
@@ -34,6 +33,5 @@
   
   <script setup lang="ts">
   import ProjectCard from '../components/ProjectCard.vue';
-  import hoursTrackerImage from '../assets/hours-tracker-demo.png'; // A blurred or sanitized screenshot
   </script>
   
