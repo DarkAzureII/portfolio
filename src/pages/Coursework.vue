@@ -3,14 +3,20 @@
     <h2 class="text-2xl font-bold mb-4">Coursework & Education</h2>
     <p class="mb-6">My formal education laid the groundwork for my development approach:</p>
 
-    <!-- Layout with two columns -->
-    <div class="grid grid-cols-2 gap-8">
+    <!-- Layout with dynamic flex direction -->
+    <div 
+      :class="{
+        'flex flex-col': !scrollingStopped, 
+        'grid grid-cols-2': scrollingStopped
+      }" 
+      class="gap-8"
+    >
       <!-- Titles Column -->
       <div>
-        <div class="mb-4">
+        <div class="mb-4 flex justify-center">
           <button 
             @click="toggleScrollMode" 
-            class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 w-full"
+            class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 w-wrap "
           >
             {{ scrollingStopped ? 'Back to Scrolling' : 'Stop Scrolling' }}
           </button>
@@ -49,13 +55,15 @@
       </div>
 
       <!-- Description Column -->
-      <div class="border-l border-gray-300 pl-4">
-        <div v-if="selectedCourse">
-          <h3 class="text-xl font-bold mb-2">{{ selectedCourse.title }}</h3>
-          <p class="text-gray-700">{{ selectedCourse.description }}</p>
-        </div>
-        <div v-else>
-          <p class="text-gray-500">Select a course to see its description.</p>
+      <div>
+        <div class="border-l border-gray-300 pl-4">
+          <div v-if="selectedCourse">
+            <h3 class="text-xl font-bold mb-2">{{ selectedCourse.title }}</h3>
+            <p class="text-gray-700">{{ selectedCourse.description }}</p>
+          </div>
+          <div v-else>
+            <p class="text-gray-500">Select a course to see its description.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -175,8 +183,8 @@ function stopScrolling() {
 function handleWheel(event: WheelEvent) {
   if (scrollingStopped.value) return
   scrollSpeed += (event.deltaY > 0) ? 1 : -1
-  if (scrollSpeed > 5) scrollSpeed = 5
-  if (scrollSpeed < -5) scrollSpeed = -5
+  if (scrollSpeed > 15) scrollSpeed = 15
+  if (scrollSpeed < -2) scrollSpeed = -2
 }
 
 function selectCourse(course: any) {
