@@ -2,7 +2,7 @@
   <section class="p-8 min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-white to-gray-50 relative">
     <!-- Main Heading -->
     <h2 class="text-4xl md:text-5xl font-bold mb-4 text-center" ref="heading">
-      Hi, I’m Tebogo Sebopela
+      Hi, I’m Tebogo
     </h2>
 
     <!-- Sub-heading / Tagline -->

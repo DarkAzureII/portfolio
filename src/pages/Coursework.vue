@@ -131,6 +131,11 @@ const courses = [
     description: "Learned about rendering pipelines, 3D transformations, shading, and data visualization techniques using graphics APIs and tools."
   },
   { 
+    title: "Coding and Cryptography", 
+    icon: "fa-lock", 
+    description: "Studied encryption techniques, secure coding practices, and the mathematical foundations of cryptography." 
+  },
+  { 
     title: "Information Systems", 
     icon: "fa-server", 
     description: "Understood the principles of enterprise systems, data integration, information security, and aligning technology with organizational goals."

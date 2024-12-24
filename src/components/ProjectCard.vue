@@ -2,7 +2,17 @@
   <div class="border p-4 shadow-sm bg-white rounded">
     <img v-if="image" :src="image" alt="Project Preview" class="mb-4 rounded" />
     <h3 class="font-semibold text-lg mb-2">{{ title }}</h3>
-    
+
+    <!-- Client Logo -->
+    <div v-if="client" class="relative flex items-center justify-center mb-4 group">
+      <img :src="client.logo" :alt="client.name" class="w-12 h-12 rounded-full object-cover" />
+      <span
+        class="absolute bottom-0 mb-2 bg-black text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity"
+      >
+        {{ client.name }}
+      </span>
+    </div>
+
     <!-- Technology Logos -->
     <div class="flex flex-wrap justify-evenly gap-2 mb-2">
       <img
@@ -14,10 +24,10 @@
         :title="tech.name"
       />
     </div>
-    
+
     <!-- Project Description -->
     <p class="text-sm text-gray-700 mb-2">{{ description }}</p>
-    
+
     <p v-if="private" class="text-xs italic text-gray-500 mt-2">Note: Private project, details are limited.</p>
   </div>
 </template>
@@ -29,12 +39,18 @@ interface Technology {
   categories: string[];
 }
 
+interface Client {
+  name: string;
+  logo: string;
+}
+
 interface ProjectCardProps {
   title: string;
   technologies: Technology[];
   description: string;
   image?: string;
   private?: boolean;
+  client?: Client;
 }
 
 defineProps<ProjectCardProps>();
