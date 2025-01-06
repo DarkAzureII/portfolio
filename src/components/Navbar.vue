@@ -1,7 +1,7 @@
 <template>
   <nav class="flex justify-between items-center p-4 bg-gray-100">
     <!-- Logo -->
-    <h1 class="text-xl font-bold whitespace-nowrap">My Portfolio</h1>
+    <h1 class="text-xl font-bold whitespace-nowrap">Tebogo</h1>
 
     <!-- Scrollable Navigation Menu -->
     <ul class="flex space-x-4 overflow-x-auto no-scrollbar">
