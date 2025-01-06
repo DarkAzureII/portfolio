@@ -20,6 +20,9 @@
       <li class="whitespace-nowrap">
         <router-link to="/coursework">Coursework</router-link>
       </li>
+      <li class="whitespace-nowrap">
+        <router-link to="/contacts">Contact Me</router-link>
+      </li>
     </ul>
   </nav>
 </template>

@@ -5,7 +5,7 @@
 
     <!-- Client Logo -->
     <div v-if="client" class="relative flex items-center justify-center mb-4 group">
-      <img :src="client.logo" :alt="client.name" class="w-12 h-12 rounded-full object-cover" />
+      <img :src="client.logo" :alt="client.name" class="w-32 h-32 rounded-full object-cover" />
       <span
         class="absolute bottom-0 mb-2 bg-black text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity"
       >
