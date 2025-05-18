@@ -57,7 +57,7 @@
           </div>
 
           <a 
-            href="YOUR_SCHEDULER_LINK" 
+            href="https://schedule.tebogosebopela.site/" 
             target="_blank"
             class="block p-6 bg-blue-800 rounded-lg border border-blue-900 backdrop-blur-sm hover:border-blue-400 transition-all duration-300 group"
           >
