@@ -51,22 +51,6 @@
           {{ skill.name }}
         </span>
 
-        <!-- Proficiency Slider -->
-        <div 
-          v-if="showProficiency"
-          class="w-full h-1 bg-gray-300 mt-2 rounded-full overflow-hidden relative opacity-0 group-hover:opacity-100 transition-opacity"
-        >
-          <div 
-            class="h-full bg-blue-600 rounded-full transition-all duration-300" 
-            :style="{ width: `${skill.proficiency}%` }"
-          ></div>
-          <span
-            class="absolute -top-6 text-xs text-blue-600"
-            :style="{ left: `${skill.proficiency - 5}%` }"
-          >
-            {{ skill.proficiency }}%
-          </span>
-        </div>
       </div>
     </div>
   </section>
@@ -128,7 +112,7 @@ const skills = [
 const categories = ['All', 'Web Development', 'Machine Learning', 'DevOps', 'Graphics Programming', 'Software Development'];
 const activeCategory = ref('All');
 const sortCriteria = ref('name');
-const showProficiency = ref(false);
+
 
 // Filtered and Sorted Skills
 const filteredSkills = computed(() =>
@@ -154,9 +138,7 @@ const sortSkills = () => {
   // Trigger sorting dynamically through computed property
 };
 
-const toggleProficiency = () => {
-  showProficiency.value = !showProficiency.value;
-};
+
 </script>
 
 <style scoped>
