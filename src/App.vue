@@ -7,7 +7,7 @@
       </transition>
     </main>
     <footer class="py-4 text-center text-gray-500">
-      © 2024 Tebogo Sebopela
+      © 2025 Tebogo Sebopela
     </footer>
   </div>
 </template>

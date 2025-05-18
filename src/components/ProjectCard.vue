@@ -5,7 +5,14 @@
 
     <!-- Client Logo -->
     <div v-if="client" class="relative flex items-center justify-center mb-4 group">
-      <img :src="client.logo" :alt="client.name" class="w-32 h-32 rounded-full object-cover" />
+      <div class="w-full h-24 flex items-center justify-center mb-4">
+      <img
+        :src="client.logo"
+        :alt="client.name"
+        class="max-h-full max-w-full object-contain"
+      />
+    </div>
+
       <span
         class="absolute bottom-0 mb-2 bg-black text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity"
       >
@@ -27,6 +34,16 @@
 
     <!-- Project Description -->
     <p class="text-sm text-gray-700 mb-2">{{ description }}</p>
+
+    <a
+      v-if="link"
+      :href="link"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-block mt-2 px-3 py-1 bg-blue-500 text-white rounded hover:bg-blue-600 transition"
+    >
+      🔗 View Site
+    </a>
 
     <p v-if="private" class="text-xs italic text-gray-500 mt-2">Note: Private project, details are limited.</p>
   </div>
@@ -51,6 +68,7 @@ interface ProjectCardProps {
   image?: string;
   private?: boolean;
   client?: Client;
+  link?: string;
 }
 
 defineProps<ProjectCardProps>();

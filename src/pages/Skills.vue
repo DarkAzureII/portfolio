@@ -1,7 +1,7 @@
 <template>
   <section class="p-8">
     <h2 class="text-2xl font-bold mb-4">Skills & Technologies</h2>
-    <p class="mb-6">Hover over the logos to see their names and optionally, their proficiency levels:</p>
+    <p class="mb-6">Hover over the logos to see their names:</p>
 
     <!-- Sort and Toggle Proficiency -->
     <div class="mb-4 flex space-x-4 overflow-x-auto">
@@ -12,13 +12,13 @@
       </select>
 
       <!-- Toggle Proficiency Button -->
-      <button
+      <!-- <button
         @click="toggleProficiency"
         class="py-2 px-4 rounded border text-sm font-semibold"
         :class="showProficiency ? 'bg-blue-600 text-white' : 'bg-gray-200 hover:bg-gray-300'"
       >
         {{ showProficiency ? 'Hide Proficiency' : 'Show Proficiency' }}
-      </button>
+      </button> -->
     </div>
 
     <!-- Filter Options -->
