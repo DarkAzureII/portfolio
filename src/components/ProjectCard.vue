@@ -1,5 +1,5 @@
 <template>
-  <div class="border p-4 shadow-sm bg-white rounded">
+  <div class="border p-4 shadow-sm bg-transparent border-blue-500 rounded">
     <img v-if="image" :src="image" alt="Project Preview" class="mb-4 rounded" />
     <h3 class="font-semibold text-lg mb-2">{{ title }}</h3>
 
@@ -35,6 +35,32 @@
     <!-- Project Description -->
     <p class="text-sm text-gray-700 mb-2">{{ description }}</p>
 
+    <div class="mt-4 border-t border-blue-500 pt-3 space-y-2">
+      <div v-if="problem" class="flex items-start">
+        <span class="mr-2 text-blue-500">🔍</span>
+        <div>
+          <p class="text-xs font-medium text-blue-500">PROBLEM SOLVED</p>
+          <p class="text-sm">{{ problem }}</p>
+        </div>
+      </div>
+
+      <div v-if="beneficiary" class="flex items-start">
+        <span class="mr-2 text-blue-500">👥</span>
+        <div>
+          <p class="text-xs font-medium text-blue-500">WHO BENEFITED</p>
+          <p class="text-sm">{{ beneficiary }}</p>
+        </div>
+      </div>
+
+      <div v-if="learnings" class="flex items-start">
+        <span class="mr-2 text-blue-500">📚</span>
+        <div>
+          <p class="text-xs font-medium text-blue-500">KEY LEARNINGS</p>
+          <p class="text-sm">{{ learnings }}</p>
+        </div>
+      </div>
+    </div>
+
     <a
       v-if="link"
       :href="link"
@@ -69,6 +95,9 @@ interface ProjectCardProps {
   private?: boolean;
   client?: Client;
   link?: string;
+  problem?: string;
+  beneficiary?: string;
+  learnings?: string;
 }
 
 defineProps<ProjectCardProps>();

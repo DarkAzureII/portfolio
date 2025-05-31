@@ -10,6 +10,9 @@
         :title="project.title"
         :technologies="project.technologies"
         :description="project.description"
+        :problem="project.problem"
+        :beneficiary="project.beneficiary"
+        :learnings="project.learnings"
         :private="project.private"
         :client="project.client"
         :link="project.link"
@@ -31,6 +34,9 @@ const projects = ref([
       { name: 'Vercel', logo: 'https://avatars.githubusercontent.com/u/14985020?s=200&v=4', categories: ['Hosting'] },
     ],
     description: 'An all-in-one platform for managing music uploads, promoting content (including YouTube videos), and booking dance performances for events.',
+    problem: 'Artists needed a centralized platform to manage their content and bookings',
+    beneficiary: 'Independent musicians and performers',
+    learnings: 'Balancing multiple user roles, content management workflows, and booking systems',
     private: false,
     link: 'https://for-bro-psi.vercel.app/',
     client: {
@@ -46,10 +52,13 @@ const projects = ref([
       { name: 'Vercel', logo: 'https://avatars.githubusercontent.com/u/14985020?s=200&v=4', categories: ['Hosting'] },
     ],
     description: 'A custom student management system for tutors, enabling streamlined student tracking, test assignment, and results management.',
+    problem: 'Tutors were using inefficient spreadsheets to track student progress',
+    beneficiary: 'Private tutors with 50+ students',
+    learnings: 'Data modeling for educational tracking and creating teacher-friendly interfaces',
     private: false,
     link: 'https://thatch-pi.vercel.app/',
     client: {
-      name: 'Freelance',
+      name: 'Freelance - Student Portal',
       logo: 'TAEP.svg', // GitHub placeholder
     },
   },
@@ -65,6 +74,9 @@ const projects = ref([
       { name: 'pm2', logo: 'https://avatars.githubusercontent.com/u/16356092?s=200&v=4', categories: ['DevOps'] },
     ],
     description: 'A platform that simplifies work-related claims logging, reducing errors and enabling employees to document tasks immediately after completion.',
+    problem: 'Manual timesheet entry led to frequent errors and delays',
+    beneficiary: 'University department staff and administrators',
+    learnings: 'Complex state management for approval workflows and audit trails',
     private: true,
     client: {
       name: 'Wits MSS',
@@ -82,6 +94,9 @@ const projects = ref([
       { name: 'pm2', logo: 'https://avatars.githubusercontent.com/u/16356092?s=200&v=4', categories: ['DevOps'] },
     ],
     description: 'An onboarding site to track postgraduate students, assign workstations, and monitor registration status for continued access.',
+    problem: 'No centralized system to track student registrations and workstation assignments',
+    beneficiary: 'University postgraduate administrators and students',
+    learnings: 'Database design for academic tracking and permission-based access control',
     private: true,
     client: {
       name: 'Wits MSS',
